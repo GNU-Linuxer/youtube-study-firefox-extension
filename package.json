@@ -34,7 +34,7 @@
     "chromedriver": "^94.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.24.2",
-    "eslint-plugin-mocha": "^9.0.0",
+    "eslint-plugin-mocha": "^10.0.1",
     "eslint-plugin-node": "^11.1.0",
     "geckodriver": "^2.0.4",
     "globby": "^11.0.3",
