@@ -28,7 +28,6 @@ module.exports = {
   globals: {
     ChromeUtils: false,
     ExtensionAPI: false,
-    __ENABLE_DEVELOPER_MODE__: false,
   },
   parserOptions: {
     ecmaVersion: 2021,

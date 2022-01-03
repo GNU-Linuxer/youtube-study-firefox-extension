@@ -1,52 +1,26 @@
 {
-  "description": "Facilitate UW research regarding YouTube browsing activities.",
-  "author": "UW",
+  "description": "UW study.",
+  "author": "Mozilla_prerna",
   "manifest_version": 2,
-  "name": "YouTube Research Extension",
-  "version": "0.0.1",
-  "homepage_url": "https://github.com/GNU-Linuxer/youtube-study-firefox-extension",
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "rally-study-template@mozilla.org",
-      "strict_min_version": "87.0"
-    }
-  },
+  "name": "Template demo",
+  "version": "0.3.1",
+  "homepage_url": "https://github.com/prerna79/ion-basic-study",
+
+   "permissions": ["geolocation", "webRequest", "*://api.bigdatacloud.net/*", "tabs"],
+
   "options_ui": {
-    "page": "public/options.html",
+    "page": "public/index.html",
     "open_in_tab": true
   },
-  "browser_action": {
-    "default_title": "Options"
-  },
-  "permissions": [
-    "<all_urls>",
-    "geolocation",
-    "tabs",
-    "idle",
-    "webNavigation",
-    "webRequest",
-    "storage",
-    "unlimitedStorage"
-  ],
-  "content_scripts": [
+
+  "content_scripts":[
     {
-      "matches": [
-        "http://localhost/*",
-        "https://rally-web-spike.web.app/*"
-      ],
-      "js": [
-        "dist/content/rally-content.js"
-      ]
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["dist/content-script.js"]
     }
-  ],
+],
+
   "background": {
-    "scripts": [
-      "dist/browser-polyfill.js",
-      "dist/background.js"
-    ]
-  },
-  "icons": {
-    "48": "assets/icon48px.svg"
-  },
-  "incognito": "not_allowed"
+    "scripts": ["dist/background.js"]
+  }
 }
